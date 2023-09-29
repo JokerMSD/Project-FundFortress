@@ -1,0 +1,27 @@
+.button {
+  display: inline-flex;
+  height: 3rem;
+  padding: 0.8125rem 1.25rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+  color: var(--grey-1);
+  border-radius: 0.5rem;
+  border: 2px solid var(--brand-1);
+  background: var(--brand-1);
+
+  &:hover {
+    display: inline-flex;
+    height: 3rem;
+    padding: 0.8125rem 1.25rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    flex-shrink: 0;
+    color: var(--grey-1);
+    border-radius: 0.5rem;
+    border: 2px solid var(--brand-2);
+    background: var(--brand-2);
+  }
+}
