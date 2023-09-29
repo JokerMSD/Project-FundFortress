@@ -10,6 +10,12 @@ export const FinanceList = () => {
         <li>
         <FinanceCard />
         </li>
+        <li>
+        <FinanceCard />
+        </li>
+        <li>
+        <FinanceCard />
+        </li>
        </ul>
       </>
   )
