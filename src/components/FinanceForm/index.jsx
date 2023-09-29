@@ -83,7 +83,7 @@ export const FinanceForm = () => {
             <option value="Saída">Saída</option>
           </select>
 
-          <button type="submit">Inserir valor</button>
+          <button className="button" type="submit">Inserir valor</button>
         </form>
       </section>
     </>

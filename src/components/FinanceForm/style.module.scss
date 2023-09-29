@@ -1,5 +1,3 @@
-// @import url("../../styles/GlobalStyles.scss");
-
 .container{
     display: flex;
     flex-direction: row;
@@ -8,14 +6,4 @@
 .container > form{
     display: flex;
     flex-direction: column;
-}
-
-.container > form > label{
-    font-size: var(--title-4-size);
-    
-}
-
-.container > form > button{
-    color: #FFFFFF;
-    background-color: var(--brand-1);
 }
