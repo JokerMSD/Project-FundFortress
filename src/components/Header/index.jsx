@@ -4,8 +4,8 @@ export const Header = () => {
 
     return (
        <>
-        <header>
-           <img src={logo} alt="" />
+        <header className='Header'>
+           <img src={logo} alt="header logo" className='HeaderLogo' />
         </header>
       </>
   )
