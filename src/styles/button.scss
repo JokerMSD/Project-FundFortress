@@ -26,9 +26,11 @@
   }
 
   &.delete{
+    color: var(--grey-4);
     width: 3.0625rem;
     height: 1.1875rem;
     border-radius: 0.125rem;
     background: var(--grey-2);
+    border: none;
   }
 }
