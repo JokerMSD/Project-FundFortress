@@ -46,7 +46,7 @@ export const FinanceForm = () => {
     <>
       <section className={Style.container}>
         <form onSubmit={submit}>
-          <label htmlFor="description">Descrição</label>
+          <label className="title three" htmlFor="description">Descrição</label>
           <input
             className="input"
             onChange={(e) => setDescription(e.target.value)}
@@ -58,7 +58,7 @@ export const FinanceForm = () => {
             required
           />
 
-          <label htmlFor="value">Valor(R$)</label>
+          <label className="title three" htmlFor="value">Valor(R$)</label>
           <input
             className="input"
             onChange={(e) => setValue(e.target.value)}
@@ -70,7 +70,7 @@ export const FinanceForm = () => {
             required
           />
 
-          <label htmlFor="valueType">Tipo de Valor</label>
+          <label className="title three" htmlFor="valueType">Tipo de Valor</label>
           <select
             className="input select"
             onChange={(e) => setValueType(e.target.value)}
