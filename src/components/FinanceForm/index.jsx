@@ -1,4 +1,4 @@
-import Style from "./style.module.css";
+import Style from "./style.module.scss";
 import { useState } from "react";
 
 export const FinanceForm = () => {
