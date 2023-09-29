@@ -7,3 +7,18 @@
 body{
     font-family: 'Nunito', 'sans-serif';
 }
+
+.card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    overflow: hidden;
+    gap: 1rem;
+    width: 35rem;
+    height: 5.4375rem;
+    border-radius: 0.5rem;
+    background: var(--grey-1);
+    border-left: 0.3125rem solid var(--brand-3);
+}
