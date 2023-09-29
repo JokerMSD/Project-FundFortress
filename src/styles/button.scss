@@ -24,4 +24,11 @@
     border: 2px solid var(--brand-2);
     background: var(--brand-2);
   }
+
+  &.delete{
+    width: 3.0625rem;
+    height: 1.1875rem;
+    border-radius: 0.125rem;
+    background: var(--grey-2);
+  }
 }
