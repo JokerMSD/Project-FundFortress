@@ -5,7 +5,7 @@ export const FinanceList = () => {
 
     return (
        <>
-       <h2>Resumo Financeiro</h2>
+       <h2 className="title three">Resumo Financeiro</h2>
        <ul>
         <li>
         <FinanceCard />
