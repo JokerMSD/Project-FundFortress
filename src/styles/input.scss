@@ -1,0 +1,27 @@
+.input {
+  display: flex;
+  width: 20.3125rem;
+  height: 3rem;
+  padding: 0rem 1rem;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  border: 2px solid var(--grey-1);
+  background: var(--grey-1);
+
+  &:focus {
+    border: 2px solid var(--grey-4);
+    background: var(--grey-1);
+  }
+
+  &.select {
+    width: 100%;
+    border: 2px solid var(--grey-1);
+    background: var(--grey-1);
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    border: 2px solid var(--grey-1);
+    background: var(--grey-1);
+  }
+}
