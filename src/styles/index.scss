@@ -32,6 +32,10 @@ main {
   border-left: 0.3125rem solid var(--brand-3);
 }
 
+.totalvalue{
+    color: var(--brand-1);
+}
+
 @media (min-width: 320px) and (max-width: 428px) {
     #root{
         height: 85rem;
