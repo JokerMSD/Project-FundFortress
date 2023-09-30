@@ -23,11 +23,11 @@ main {
   flex-wrap: wrap;
   align-content: space-between;
   overflow: hidden;
-  gap: 1rem;
   width: 35rem;
   height: 7.4375rem;
   border-radius: 0.5rem;
   background: var(--grey-1);
+  margin-bottom: 1.5rem;
 }
 .financeListTitle {
   margin-top: 1.2rem;
@@ -71,7 +71,6 @@ main {
 .financeLi {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
 }
 .financeUl {
   display: flex;
@@ -79,14 +78,14 @@ main {
   gap: 0.94rem;
 }
 .titleCard {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   margin-left: 0.87rem;
   margin-bottom: 0;
 }
 .pCard {
-  margin-top: 0.5rem;
+  margin-top: 0.9rem;
   margin-left: 0.87rem;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 }
 .pCardValue {
   margin-right: 0.87rem;
@@ -137,10 +136,11 @@ main {
   .totalvalue {
     text-align: end;
   }
-  .financeList {
-    height: 100%;
-    margin-left: 1.06rem;
-    margin-top: 1.19rem;
+  .financeLi {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin-left: 1rem;
   }
   .financeUl {
     display: flex;
