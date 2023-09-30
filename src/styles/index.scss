@@ -113,12 +113,19 @@ main {
   #root {
     height: 85rem;
   }
+  .Header{
+    margin:0;
+    margin-bottom: -15rem;
+  }
   main {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     height: 80rem;
     max-height: 285rem;
+  }
+  .financeSection{
+    width: 100%;
   }
   .card {
     max-width: 85%;
@@ -173,8 +180,11 @@ main {
     margin-left: 0.87rem;
     margin-bottom: 0;
   }
+  .totaltext{
+    margin: 0;
+  }
   .ptext{
-    margin: 1.1875rem;
+    margin: 0rem;
     margin-left: 0;
   }
   .btnCard {
