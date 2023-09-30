@@ -7,14 +7,14 @@
 
 body {
   font-family: "Nunito", "sans-serif";
+  
 }
 
 main {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  align-content: center;
-  height: 45rem;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .card {
@@ -23,7 +23,6 @@ main {
   flex-wrap: wrap;
   align-content: space-between;
   overflow: hidden;
-  width: 35rem;
   height: 7.4375rem;
   border-radius: 0.5rem;
   background: var(--grey-1);
@@ -56,17 +55,28 @@ main {
   flex-direction: column;
   flex-wrap: wrap;
   height: 10%;
+  max-height: 5rem;
   border: 1px solid var(--grey-2);
   padding: 1rem;
   margin-top: 1.19rem;
   border-radius: 0.3125rem;
   margin-right: 1.5rem;
 }
+.financeSection{
+  width: 18%;
+}
+.cardSection{
+  display: flex;
+  flex-direction: column-reverse;
+}
 .ptext {
   margin: 0;
 }
 .totalvalue {
   text-align: end;
+}
+.totaltext{
+  margin-bottom: 1rem;
 }
 .financeLi {
   display: flex;
@@ -92,7 +102,7 @@ main {
 }
 .btnCard {
   margin-top: 0.81rem;
-  margin-left: 2.87rem;
+  margin-left: 2rem;
   margin-bottom: 1.31rem;
 }
 .footer {
@@ -111,10 +121,11 @@ main {
     max-height: 285rem;
   }
   .card {
-    width: 95%;
+    max-width: 85%;
     flex-direction: column;
     height: 9.95rem;
     flex-wrap: nowrap;
+    margin-left: 6%;
     gap: 0rem;
     margin-top: 1.06rem;
   }
@@ -125,13 +136,14 @@ main {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 86.4%;
     height: 10%;
     border: 1px solid var(--grey-2);
     padding: 1rem;
     margin-top: 1.19rem;
-    margin-left: 0.75rem;
+    margin-left: 6%;
     border-radius: 0.3125rem;
+    max-width: 100%;
+
   }
   .totalvalue {
     text-align: end;
@@ -141,6 +153,10 @@ main {
     flex-direction: column;
     width: 95%;
     margin-left: 1rem;
+  }
+  .financeListTitle{
+    max-width: 100%;
+    margin-left: 6%;
   }
   .financeUl {
     display: flex;
@@ -156,6 +172,10 @@ main {
     margin-top: 0.5rem;
     margin-left: 0.87rem;
     margin-bottom: 0;
+  }
+  .ptext{
+    margin: 1.1875rem;
+    margin-left: 0;
   }
   .btnCard {
     margin-top: 0.81rem;
