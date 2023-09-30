@@ -65,7 +65,7 @@ export const FinanceForm = ({ finances, setFinances, total, setTotal }) => {
             name="value"
             id="value"
             value={value}
-            placeholder="1"
+            placeholder="R$: 0,00"
             required
           />
 
