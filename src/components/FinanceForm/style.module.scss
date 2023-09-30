@@ -1,22 +1,27 @@
-.container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: 1.21rem;
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 1.21rem;
+  max-height: 32rem;
 }
 
-.container > form{
-    display: flex;
-    flex-direction: column;
-    gap: 1.43rem;
-    border: 1px solid var(--grey-2);
-    padding: 1.31rem;
-    border-radius: 0.3125rem;
+.container > form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.43rem;
+  border: 1px solid var(--grey-2);
+  padding: 1.31rem;
+  border-radius: 0.3125rem;
+  margin-right: 1.5rem;
 }
 
-@media (min-width:320px) and (max-width: 428px) {
-    .container {
-        justify-content: center;
-    }
+@media (min-width: 320px) and (max-width: 428px) {
+  .container {
+    justify-content: center;
+  }
 
+  .container > form {
+    margin-left: 1.5rem;
+  }
 }
