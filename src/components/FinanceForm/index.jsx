@@ -1,41 +1,32 @@
 import Style from "./style.module.scss";
 import { useState } from "react";
 
-export const FinanceForm = () => {
+export const FinanceForm = ({ finances, setFinances, total, setTotal }) => {
   const [description, setDescription] = useState("");
   const [value, setValue] = useState("");
   const [valueType, setValueType] = useState("");
-  const [id, setId] = useState(0);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleAddFinance = (e) => {
+    e.preventDefault();
+
+    if (description.trim() === "" || value.trim() === "" || valueType === "") {
+      return;
+    }
+
     const newFinance = {
       description,
-      value,
+      value: parseFloat(value),
       valueType,
-      date,
-      date,
-      id,
+      id: Date.now(),
     };
+
     setFinances([...finances, newFinance]);
-    setTotal(total + value);
-    setDescription("");
-    setValue("");
-    setValueType("");
-    setId(id + 1);
-    setId(id + 1);
-  };
 
-  const handleDelete = (id) => {
-    const newFinances = finances.filter((finance) => finance.id !== id);
-    setFinances(newFinances);
-    setTotal(total - value);
-    setTotalOutcome(totalOutcome - value);
-  };
-
-  const submit = (event) => {
-    event.preventDefault();
-    console.log({ description, value, valueType });
+    if (valueType === "Entrada") {
+      setTotal(total + newFinance.value);
+    } else {
+      setTotal(total - newFinance.value);
+    }
 
     setDescription("");
     setValue("");
@@ -45,22 +36,28 @@ export const FinanceForm = () => {
   return (
     <>
       <section className={Style.container}>
-        <form onSubmit={submit}>
+        <form onSubmit={handleAddFinance}>
           <div className="formDiv">
-          <label className="title three" htmlFor="description">Descrição</label>
-          <input
-            className="input"
-            onChange={(e) => setDescription(e.target.value)}
-            type="text"
-            name="description"
-            id="description"
-            value={description}
-            placeholder="Digite aqui sua descrição"
-            required
-          />
-          <small className="title Headline formSmall">Ex: Compra de roupas</small>
+            <label className="title three" htmlFor="description">
+              Descrição
+            </label>
+            <input
+              className="input"
+              onChange={(e) => setDescription(e.target.value)}
+              type="text"
+              name="description"
+              id="description"
+              value={description}
+              placeholder="Digite aqui sua descrição"
+              required
+            />
+            <small className="title Headline formSmall">
+              Ex: Compra de roupas
+            </small>
           </div>
-          <label className="title three" htmlFor="value">Valor(R$)</label>
+          <label className="title three" htmlFor="value">
+            Valor(R$)
+          </label>
           <input
             className="input"
             onChange={(e) => setValue(e.target.value)}
@@ -72,7 +69,9 @@ export const FinanceForm = () => {
             required
           />
 
-          <label className="title three" htmlFor="valueType">Tipo de Valor</label>
+          <label className="title three" htmlFor="valueType">
+            Tipo de Valor
+          </label>
           <select
             className="input select"
             onChange={(e) => setValueType(e.target.value)}
@@ -84,15 +83,11 @@ export const FinanceForm = () => {
             <option value="Selecione" defaultValue hidden>
               Selecione
             </option>
-            <option value="Entrada">
-              Entrada
-              </option>
-            <option value="Saída">
-              Saída
-              </option>
+            <option value="Entrada">Entrada</option>
+            <option value="Saída">Saída</option>
           </select>
 
-          <button className="button btnForm" type="submit">Inserir valor</button>
+          <button className="button btnForm">Inserir valor</button>
         </form>
       </section>
     </>
