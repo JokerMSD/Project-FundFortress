@@ -46,6 +46,7 @@ export const FinanceForm = () => {
     <>
       <section className={Style.container}>
         <form onSubmit={submit}>
+          <div className="formDiv">
           <label className="title three" htmlFor="description">Descrição</label>
           <input
             className="input"
@@ -57,7 +58,8 @@ export const FinanceForm = () => {
             placeholder="Digite aqui sua descrição"
             required
           />
-
+          <small className="title Headline formSmall">Ex: Compra de roupas</small>
+          </div>
           <label className="title three" htmlFor="value">Valor(R$)</label>
           <input
             className="input"
@@ -90,7 +92,7 @@ export const FinanceForm = () => {
               </option>
           </select>
 
-          <button className="button" type="submit">Inserir valor</button>
+          <button className="button btnForm" type="submit">Inserir valor</button>
         </form>
       </section>
     </>
