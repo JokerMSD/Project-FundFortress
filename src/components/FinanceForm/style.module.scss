@@ -8,4 +8,14 @@
     display: flex;
     flex-direction: column;
     gap: 0.63rem;
+    border: 1px solid var(--grey-2);
+    padding: 1.31rem;
+    border-radius: 0.3125rem;
+}
+
+@media (min-width:320px) and (max-width: 428px) {
+    .container {
+        justify-content: center;
+    }
+
 }
