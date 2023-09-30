@@ -8,7 +8,6 @@ export const LandingPage = () => {
   return (
     <>
      <DefaultTemplate>
-       <FinanceForm />
        <FinanceApp/> 
      </DefaultTemplate>
     </>
