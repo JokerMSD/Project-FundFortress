@@ -29,21 +29,22 @@ main {
   border-radius: 0.5rem;
   background: var(--grey-1);
 }
-.financeListTitle{
-    margin-bottom: 1.81rem;
+.financeListTitle {
+  margin-top: 1.2rem;
+  margin-bottom: 1.81rem;
 }
-.formSmall{
-    margin-left: 0.7rem;
+.formSmall {
+  margin-left: 0.7rem;
 }
-.btnForm{
-    font-size: 1.2rem;
+.btnForm {
+  font-size: 1.2rem;
 }
-.positive{
-border-left: 0.3125rem solid var(--brand-3);
+.positive {
+  border-left: 0.3125rem solid var(--brand-3);
 }
-.negative{
-    border-left: 0.3125rem solid var(--grey-2);
-    }
+.negative {
+  border-left: 0.3125rem solid var(--grey-2);
+}
 .totalvalue {
   color: var(--brand-1);
 }
@@ -59,17 +60,18 @@ border-left: 0.3125rem solid var(--brand-3);
   padding: 1rem;
   margin-top: 1.19rem;
   border-radius: 0.3125rem;
+  margin-right: 1.5rem;
 }
-.ptext{
-    margin: 0;
+.ptext {
+  margin: 0;
 }
 .totalvalue {
   text-align: end;
 }
-.financeList {
-  height: 100%;
-  margin-left: 1.06rem;
-  margin-top: 1.19rem;
+.financeLi {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .financeUl {
   display: flex;
@@ -86,8 +88,8 @@ border-left: 0.3125rem solid var(--brand-3);
   margin-left: 0.87rem;
   margin-bottom: 0;
 }
-.pCardValue{
-    margin-right: 0.87rem;
+.pCardValue {
+  margin-right: 0.87rem;
 }
 .btnCard {
   margin-top: 0.81rem;
@@ -103,8 +105,11 @@ border-left: 0.3125rem solid var(--brand-3);
     height: 85rem;
   }
   main {
+    display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    height: 80rem;
+    max-height: 285rem;
   }
   .card {
     width: 95%;
