@@ -1,22 +1,13 @@
 import { FinanceCard } from "../FinanceCard";
+import { FinanceApp } from "../FinanceCardFather";
 
 export const FinanceList = () => {
   return (
     <>
       <section className="financeList">
-        <h2 className="title two financeListTitle">Resumo Financeiro</h2>
         <ul className="financeUl">
           <li>
-            <FinanceCard />
-          </li>
-          <li>
-            <FinanceCard />
-          </li>
-          <li>
-            <FinanceCard />
-          </li>
-          <li>
-            <FinanceCard  />
+          {/* <FinanceApp/> */}
           </li>
         </ul>
       </section>
