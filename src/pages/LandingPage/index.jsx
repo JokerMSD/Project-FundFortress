@@ -1,9 +1,7 @@
 import { DefaultTemplate } from '../../components/DefaultTemplate'
 import { FinanceForm } from '../../components/FinanceForm'
 import { FinanceList } from '../../components/FinanceList'
-import { FinanceCard } from '../../components/FinanceCard'
-import { Total } from '../../components/Total'
-
+import { FinanceApp } from '../../components/FinanceCardFather'
 
 
 export const LandingPage = () => {
@@ -11,8 +9,7 @@ export const LandingPage = () => {
     <>
      <DefaultTemplate>
        <FinanceForm />
-       <Total />
-       <FinanceList />
+       <FinanceApp/> 
      </DefaultTemplate>
     </>
   );
