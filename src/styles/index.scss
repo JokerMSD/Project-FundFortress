@@ -5,24 +5,94 @@
 @import url(./input.scss);
 @import url(./header.scss);
 
-
-body{
-    font-family: 'Nunito', 'sans-serif';
-    display: flex;
-    justify-content: center;
+body {
+  font-family: "Nunito", "sans-serif";
 }
 
-.card{
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  height: 45rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
+  overflow: hidden;
+  gap: 1rem;
+  width: 35rem;
+  height: 5.4375rem;
+  border-radius: 0.5rem;
+  background: var(--grey-1);
+  border-left: 0.3125rem solid var(--brand-3);
+}
+
+@media (min-width: 320px) and (max-width: 428px) {
+    #root{
+        height: 85rem;
+    }
+  main {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .card {
+    width: 95%;
+    flex-direction: column;
+    height: 9.95rem;
+    flex-wrap: nowrap;
+    gap: 0rem;
+    margin-top: 1.06rem;
+
+  }
+  .container {
+    justify-content: center;
+  }
+  .Totalsection {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content: space-between;
-    justify-content: center;
-    overflow: hidden;
-    gap: 1rem;
-    width: 35rem;
-    height: 5.4375rem;
-    border-radius: 0.5rem;
-    background: var(--grey-1);
-    border-left: 0.3125rem solid var(--brand-3);
+    width: 86.4%;
+    height: 10%;
+    border: 1px solid var(--grey-2);
+    padding: 1rem;
+    margin-top: 1.19rem;
+    margin-left: 0.75rem;
+    border-radius: 0.3125rem;
+  }
+  .totalvalue{
+    text-align: end;
+  }
+  .financeList{
+    height: 100%;
+    margin-left: 1.06rem;
+    margin-top: 1.19rem;
+  }
+  .financeUl{
+    display: flex;
+    flex-direction: column;
+    gap: 0.94rem;
+  }
+  .titleCard{
+    margin-top: 0.5rem;
+    margin-left: 0.87rem;
+    margin-bottom: 0;
+  }
+  .pCard{
+    margin-top: 0.5rem;
+    margin-left: 0.87rem;
+    margin-bottom: 0;
+  }
+  .btnCard{
+    margin-top: 0.81rem;
+    margin-left: 0.87rem;
+    margin-bottom: 1.31rem;
+  }
+  .footer{
+    margin-top: 10rem;
+  }
 }
