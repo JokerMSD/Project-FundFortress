@@ -7,7 +7,6 @@ export const FinanceList = () => {
       <section className="financeList">
         <ul className="financeUl">
           <li>
-          {/* <FinanceApp/> */}
           </li>
         </ul>
       </section>
