@@ -11,6 +11,6 @@ function App() {
      <LandingPage/>
     </>
   )
-}
+};
 
 export default App

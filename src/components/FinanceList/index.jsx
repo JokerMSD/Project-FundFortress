@@ -1,6 +1,3 @@
-import { FinanceCard } from "../FinanceCard";
-import { FinanceApp } from "../FinanceCardFather";
-
 export const FinanceList = () => {
   return (
     <>

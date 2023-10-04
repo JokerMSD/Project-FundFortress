@@ -5,7 +5,7 @@
   margin-top: 1.21rem;
   max-height: 32rem;
   width: 35.3184rem;
-}
+};
 
 .container > form {
   display: flex;
@@ -15,15 +15,15 @@
   padding: 1.31rem;
   border-radius: 0.3125rem;
   margin-right: 1.5rem;
-}
+};
 
 .container > form > div > input{
   width: 92.8%;
-}
+};
 
 .container > form > input{
   width: 92.8%;
-}
+};
 
 @media (min-width: 320px) and (max-width: 428px) {
   .container {
@@ -41,4 +41,4 @@
   .container > form > input{
     max-width: 85%;
   }
-}
+};

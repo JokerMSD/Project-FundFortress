@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Total } from "../FinanceCard";
-import { FinanceCard } from "../FinanceCard";
-import { FinanceForm } from "../FinanceForm";
+import React, { useState } from "react"
+import { Total } from "../FinanceCard"
+import { FinanceCard } from "../FinanceCard"
+import { FinanceForm } from "../FinanceForm"
 
 export const FinanceApp = () => {
   const [finances, setFinances] = useState([]);

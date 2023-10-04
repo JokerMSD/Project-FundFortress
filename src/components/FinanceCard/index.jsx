@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
 export const Total = ({ totalValue }) => {
   const formattedTotal = typeof totalValue === 'number' ? totalValue.toFixed(2) : '0.00';

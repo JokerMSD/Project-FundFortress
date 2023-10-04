@@ -1,5 +1,5 @@
-import Style from "./style.module.scss";
-import { useState } from "react";
+import Style from "./style.module.scss"
+import { useState } from "react"
 
 export const FinanceForm = ({ finances, setFinances, total, setTotal }) => {
   const [description, setDescription] = useState("");
