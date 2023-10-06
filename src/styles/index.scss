@@ -118,8 +118,11 @@ main {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    height: 80rem;
-    max-height: 285rem;
+    height: auto;
+    max-height: auto;
+    overflow-y: auto;
+    margin-top: 9rem;
+    padding-bottom: 3rem
   };
   .financeSection{
     width: 100%;
