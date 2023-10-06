@@ -4,8 +4,16 @@ import { FinanceCard } from "../FinanceCard";
 import { FinanceForm } from "../FinanceForm";
 
 export const FinanceApp = () => {
-  const [finances, setFinances] = useState([]);
-  const [total, setTotal] = useState(0);
+  const [finances, setFinances] = useState(() => {
+    const storedFinances = JSON.parse(localStorage.getItem("finances"));
+    return storedFinances || [];
+    
+  });
+
+  const [total, setTotal] = useState(() => {
+    const storedTotal = localStorage.getItem("financesTotal");
+    return storedTotal || innerText("Não há registros")
+  });
 
   useEffect(() => {
     const calculateTotal = () => {
@@ -18,19 +26,23 @@ export const FinanceApp = () => {
         }
       });
       setTotal(newTotal);
+      localStorage.setItem("finances", JSON.stringify(finances));
+      localStorage.setItem("financesTotal", JSON.stringify(total));
     };
-
     
     calculateTotal();
   }, [finances]);
   
-  const handleDelete = (description, value, type) => {
+  
+  const handleDelete = (id) => {
     const updatedFinances = finances.filter(
-      (finance) => finance.description !== description
-    );
-
-    setFinances(updatedFinances);
-  };
+      (finance) => finance.id !== id
+      );
+      
+      setFinances(updatedFinances);
+    };
+    
+    
 
   return (
     <>
@@ -44,18 +56,21 @@ export const FinanceApp = () => {
 
         <Total totalValue={total} />
       </section>
+
       <section className="financeSection">
         <h2 className="title two financeListTitle">Resumo Financeiro</h2>
         <section className="cardSection">
-          {finances.map((finance, index) => (
+          {(finances.map((finance, index) => (
             <FinanceCard
               key={index}
               description={finance.description}
               value={finance.value}
               type={finance.valueType}
-              onDelete={() => handleDelete(finance.description, finance.value, finance.valueType)}
+              date='30/03'
+              onDelete={() => handleDelete(finance.id)}
             />
-          ))}
+          ))
+        )}
         </section>
       </section>
     </>
