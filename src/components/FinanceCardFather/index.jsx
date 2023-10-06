@@ -66,7 +66,7 @@ export const FinanceApp = () => {
               description={finance.description}
               value={finance.value}
               type={finance.valueType}
-              date='30/03'
+              date={finance.date}
               onDelete={() => handleDelete(finance.id)}
             />
           ))

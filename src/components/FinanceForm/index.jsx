@@ -13,11 +13,21 @@ export const FinanceForm = ({ finances, setFinances, total, setTotal }) => {
       return;
     }
 
+    const now = new Date();
+    const formattedDate = now.toLocaleString(undefined, {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+
     const newFinance = {
       description,
       value: parseFloat(value),
       valueType,
       id: Date.now(),
+      date: formattedDate,
     };
 
     setFinances([...finances, newFinance]);

@@ -48,7 +48,7 @@ export const FinanceCard = ({ description, value, type, date, onDelete }) => {
         <h2 className="title three titleCard">{description}</h2>
         <p className="title Headline pCard">{type}</p>
         <p className="title four pCard pCardValue">{formatCurrency(value)}</p>
-        <p>data:{date}</p>
+        <p className="title Headline pCard">{date}</p>
         <button className="button delete btnCard" onClick={handleDeleteClick}>Excluir</button>
       </div>
     </>
