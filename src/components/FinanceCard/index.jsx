@@ -27,11 +27,11 @@ export const Total = ({ totalValue }) => {
 
 
 
-export const FinanceCard = ({ description, value, type, onDelete }) => {
+export const FinanceCard = ({ description, value, type, date, onDelete }) => {
   const cardClass = type === "Entrada" ? "positive" : "negative";
   
   const handleDeleteClick = () => {
-    onDelete(description, value, type);
+    onDelete(description, value, type, date);
   };
 
   const formatCurrency = (value) => {
@@ -48,6 +48,7 @@ export const FinanceCard = ({ description, value, type, onDelete }) => {
         <h2 className="title three titleCard">{description}</h2>
         <p className="title Headline pCard">{type}</p>
         <p className="title four pCard pCardValue">{formatCurrency(value)}</p>
+        <p>data:{date}</p>
         <button className="button delete btnCard" onClick={handleDeleteClick}>Excluir</button>
       </div>
     </>
