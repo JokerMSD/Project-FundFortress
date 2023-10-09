@@ -22,12 +22,6 @@ export const Total = ({ totalValue }) => {
   );
 };
 
-
-
-
-
-
-
 export const FinanceCard = ({ description, value, type, date, onDelete }) => {
   const cardClass = type === "Entrada" ? "positive" : "negative";
   
