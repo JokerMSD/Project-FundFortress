@@ -5,7 +5,11 @@ export const Header = () => {
     return (
        <>
         <header className='Header'>
-           <img src={logo} alt="header logo" className='HeaderLogo' />
+           <img 
+           className='HeaderLogo' 
+           src={logo} 
+           alt="header logo" 
+           />
         </header>
       </>
   )

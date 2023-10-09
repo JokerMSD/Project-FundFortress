@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Total } from "../FinanceCard";
 import { FinanceCard } from "../FinanceCard";
 import { FinanceForm } from "../FinanceForm";
+import Style from "./style.module.scss"
 
 export const FinanceApp = () => {
   const [finances, setFinances] = useState(() => {
@@ -57,9 +58,9 @@ export const FinanceApp = () => {
         <Total totalValue={total} />
       </section>
 
-      <section className="financeSection">
-        <h2 className="title two financeListTitle">Resumo Financeiro</h2>
-        <section className="cardSection">
+      <section className={Style.financeSection}>
+        <h2 className={Style.financeListTitle}>Resumo Financeiro</h2>
+        <section className={Style.cardSection}>
           {(finances.map((finance, index) => (
             <FinanceCard
               key={index}

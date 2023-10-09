@@ -46,13 +46,13 @@ export const FinanceForm = ({ finances, setFinances, total, setTotal }) => {
   return (
     <>
       <section className={Style.container}>
-        <form onSubmit={handleAddFinance}>
+        <form className={Style.formContainer} onSubmit={handleAddFinance}>
           <div className="formDiv">
             <label className="title three" htmlFor="description">
               Descrição
             </label>
             <input
-              className="input"
+              className={Style.input}
               onChange={(e) => setDescription(e.target.value)}
               type="text"
               name="description"
@@ -61,7 +61,7 @@ export const FinanceForm = ({ finances, setFinances, total, setTotal }) => {
               placeholder="Digite aqui sua descrição"
               required
             />
-            <small className="title Headline formSmall">
+            <small className={Style.formSmall}>
               Ex: Compra de roupas
             </small>
           </div>
@@ -69,7 +69,7 @@ export const FinanceForm = ({ finances, setFinances, total, setTotal }) => {
             Valor(R$)
           </label>
           <input
-            className="input"
+            className={Style.input}
             onChange={(e) => setValue(e.target.value)}
             type="text"
             name="value"
@@ -97,7 +97,7 @@ export const FinanceForm = ({ finances, setFinances, total, setTotal }) => {
             <option value="Saída">Saída</option>
           </select>
 
-          <button className="button btnForm">Inserir valor</button>
+          <button className={Style.btnForm}>Inserir valor</button>
         </form>
       </section>
     </>
