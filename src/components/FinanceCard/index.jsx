@@ -1,4 +1,6 @@
-import React, { useState } from "react"
+import React from "react";
+import { BsFillTrashFill } from "react-icons/bs";
+import Style from "./style.module.scss"
 
 export const Total = ({ totalValue }) => {
   
@@ -13,10 +15,10 @@ export const Total = ({ totalValue }) => {
 
   return (
     <>
-      <section className="Totalsection">
-        <h2 className="title three totaltext">Valor total:</h2>
-        <p className="title Headline ptext">O valor se refere ao saldo</p>
-        <p className="title three totalvalue">{formattedTotal}</p>
+      <section className={Style.totalSection}>
+        <h2 className={Style.totaltext}>Valor total:</h2>
+        <p className={Style.ptext}>O valor se refere ao saldo</p>
+        <p className={Style.totalvalue}>{formattedTotal}</p>
       </section>
     </>
   );
@@ -39,12 +41,17 @@ export const FinanceCard = ({ description, value, type, date, onDelete }) => {
 
   return (
     <>
-      <div className={`card ${cardClass}`}>
-        <h2 className="title three titleCard">{description}</h2>
-        <p className={`title pline pCard ${type}`}>{type}</p>
-        <span className="title four pCard pCardValue">{formatCurrency(value)}</span>
-        <p className="title Headline pCard">{date}</p>
-        <button className="button delete btnCard" onClick={handleDeleteClick}>Excluir</button>
+      <div className={`${Style.card} ${cardClass}`}>
+        <h2 className={Style.titleCard}>{description}</h2>
+        <p className={`${Style.pCard} ${type}`}>{type}</p>
+        <span className={Style.pCardValue}>{formatCurrency(value)}</span>
+        <p className={Style.pCardDate}>{date}</p>
+        <button 
+           className={Style.btnCard} 
+           onClick={handleDeleteClick}
+        >
+           <BsFillTrashFill className={Style.trashIcon}/>
+        </button>
       </div>
     </>
   );

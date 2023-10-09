@@ -7,7 +7,7 @@ export const DefaultTemplate = ({children}) => {
      <main>
         {children}
      </main>
-     <footer></footer>
+     <footer/>
     </>
   );
 };
