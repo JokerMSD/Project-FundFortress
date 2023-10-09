@@ -1,12 +1,13 @@
-import logo from '../../assets/LogoLight.svg'
+import logo from '../../assets/LogoLight.svg';
+import Style from './style.module.scss';
 
 export const Header = () => {
 
     return (
        <>
-        <header className='Header'>
+        <header className={Style.Header}>
            <img 
-           className='HeaderLogo' 
+           className={Style.HeaderLogo} 
            src={logo} 
            alt="header logo" 
            />
