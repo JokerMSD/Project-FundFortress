@@ -41,8 +41,14 @@ main {
 .positive {
   border-left: 0.3125rem solid var(--brand-3);
 };
+.Entrada{
+  color: var(--brand-3);
+}
 .negative {
-  border-left: 0.3125rem solid var(--grey-2);
+  border-left: 0.3125rem solid var(--brand-red);
+};
+.Saída{
+  color: var(--brand-red);
 };
 .totalvalue {
   color: var(--brand-1);
@@ -100,6 +106,7 @@ main {
 .btnCard {
   margin-top: 0.81rem;
   margin-left: 2rem;
+  margin-right: 1.3rem;
   margin-bottom: 1.31rem;
 };
 .footer {
@@ -130,7 +137,7 @@ main {
   .card {
     max-width: 85%;
     flex-direction: column;
-    height: 9.95rem;
+    height: 11.95rem;
     flex-wrap: nowrap;
     margin-left: 6%;
     gap: 0rem;
