@@ -3,7 +3,6 @@
 @import "./Typography.scss";
 @import "./button.scss";
 @import "./input.scss";
-@import "./header.scss";
 
 body {
   font-family: "Nunito", "sans-serif";
@@ -27,19 +26,6 @@ main {
 .Saída{
   color: var(--brand-red);
 };
-.container {
-  justify-content: center;
-};
-
-.financeLi {
-  display: flex;
-  flex-direction: column;
-};
-.financeUl {
-  display: flex;
-  flex-direction: column;
-  gap: 0.94rem;
-};
 .footer {
   margin-top: 10rem;
 };
@@ -47,10 +33,6 @@ main {
 @media (min-width: 320px) and (max-width: 428px) {
   #root {
     height: 85rem;
-  };
-  .Header{
-    margin:0;
-    margin-bottom: -9rem;
   };
   main {
     display: flex;
@@ -61,20 +43,6 @@ main {
     overflow-y: auto;
     margin-top: 9rem;
     padding-bottom: 3rem
-  };
-  .container {
-    justify-content: center;
-  };
-  .financeLi {
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-    margin-left: 1rem;
-  };
-  .financeUl {
-    display: flex;
-    flex-direction: column;
-    gap: 0.94rem;
   };
   .footer {
     margin-top: 10rem;
