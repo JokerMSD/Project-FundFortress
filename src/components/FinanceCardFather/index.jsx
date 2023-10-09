@@ -12,7 +12,7 @@ export const FinanceApp = () => {
 
   const [total, setTotal] = useState(() => {
     const storedTotal = localStorage.getItem("financesTotal");
-    return storedTotal || innerText("Não há registros")
+    return storedTotal || []
   });
 
   useEffect(() => {
