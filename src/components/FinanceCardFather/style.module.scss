@@ -1,0 +1,27 @@
+@import "../../styles/index.scss";
+
+.cardSection{
+    display: flex;
+    flex-direction: column-reverse;
+};
+.financeSection{
+    width: 18%;
+};
+.financeListTitle {
+    @extend .title;
+    @extend .two;
+    margin-top: 1.2rem;
+    margin-bottom: 1.81rem;
+};
+
+@media (min-width: 320px) and (max-width: 428px) {
+
+    .financeSection{
+      width: 100%;
+    };
+    .financeListTitle{
+        max-width: 100%;
+        margin-left: 6%;
+    };
+};
+  

@@ -1,42 +1,19 @@
-@import url(./GlobalStyles.scss);
-@import url(./reset.scss);
-@import url(./Typography.scss);
-@import url(./button.scss);
-@import url(./input.scss);
-@import url(./header.scss);
+@import "./GlobalStyles.scss";
+@import "./reset.scss";
+@import "./Typography.scss";
+@import "./button.scss";
+@import "./input.scss";
+@import "./header.scss";
 
 body {
   font-family: "Nunito", "sans-serif";
   
 };
-
 main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-};
-
-.card {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: space-between;
-  overflow: hidden;
-  height: 7.4375rem;
-  border-radius: 0.5rem;
-  background: var(--grey-1);
-  margin-bottom: 1.5rem;
-};
-.financeListTitle {
-  margin-top: 1.2rem;
-  margin-bottom: 1.81rem;
-};
-.formSmall {
-  margin-left: 0.7rem;
-};
-.btnForm {
-  font-size: 1.2rem;
 };
 .positive {
   border-left: 0.3125rem solid var(--brand-3);
@@ -50,37 +27,10 @@ main {
 .Saída{
   color: var(--brand-red);
 };
-.totalvalue {
-  color: var(--brand-1);
-};
 .container {
   justify-content: center;
 };
-.Totalsection {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 10%;
-  max-height: 5rem;
-  border: 0.0625rem solid var(--grey-2);
-  padding: 1rem;
-  margin-top: 1.19rem;
-  border-radius: 0.3125rem;
-  margin-right: 1.5rem;
-};
-.financeSection{
-  width: 18%;
-};
-.cardSection{
-  display: flex;
-  flex-direction: column-reverse;
-};
-.ptext {
-  margin: 0;
-};
-.totalvalue {
-  text-align: end;
-};
+
 .financeLi {
   display: flex;
   flex-direction: column;
@@ -89,26 +39,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.94rem;
-};
-.titleCard {
-  margin-top: 1rem;
-  margin-left: 0.87rem;
-  margin-bottom: 0;
-};
-.pCard {
-  margin-top: 0.9rem;
-  margin-left: 0.87rem;
-  margin-bottom: 0.5rem;
-};
-.pCardValue {
-  margin-right: 0.87rem;
-};
-.btnCard {
-  margin-top: 0.81rem;
-  margin-left: 2rem;
-  margin-right: 1.3rem;
-  margin-bottom: 1.31rem;
-  border-radius: 18.75rem
 };
 .footer {
   margin-top: 10rem;
@@ -132,36 +62,8 @@ main {
     margin-top: 9rem;
     padding-bottom: 3rem
   };
-  .financeSection{
-    width: 100%;
-  };
-  .card {
-    max-width: 85%;
-    flex-direction: column;
-    height: 11.95rem;
-    flex-wrap: nowrap;
-    margin-left: 6%;
-    gap: 0rem;
-    margin-top: 1.06rem;
-  };
   .container {
     justify-content: center;
-  };
-  .Totalsection {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 10%;
-    border: 0.0625rem solid var(--grey-2);
-    padding: 1rem;
-    margin-top: 1.19rem;
-    margin-left: 6%;
-    border-radius: 0.3125rem;
-    max-width: 100%;
-
-  };
-  .totalvalue {
-    text-align: end;
   };
   .financeLi {
     display: flex;
@@ -169,36 +71,10 @@ main {
     width: 95%;
     margin-left: 1rem;
   };
-  .financeListTitle{
-    max-width: 100%;
-    margin-left: 6%;
-  };
   .financeUl {
     display: flex;
     flex-direction: column;
     gap: 0.94rem;
-  };
-  .titleCard {
-    margin-top: 0.5rem;
-    margin-left: 0.87rem;
-    margin-bottom: 0;
-  };
-  .pCard {
-    margin-top: 0.5rem;
-    margin-left: 0.87rem;
-    margin-bottom: 0;
-  };
-  .totaltext{
-    margin: 0;
-  };
-  .ptext{
-    margin: 0rem;
-    margin-left: 0;
-  };
-  .btnCard {
-    margin-top: 0.81rem;
-    margin-left: 0.87rem;
-    margin-bottom: 1.31rem;
   };
   .footer {
     margin-top: 10rem;

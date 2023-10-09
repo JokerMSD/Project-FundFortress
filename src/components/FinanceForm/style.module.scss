@@ -1,3 +1,5 @@
+@import "../../styles/index.scss";
+
 .container {
   display: flex;
   flex-direction: column;
@@ -7,7 +9,7 @@
   width: 35.3184rem;
 };
 
-.container > form {
+.formContainer {
   display: flex;
   flex-direction: column;
   gap: 1.43rem;
@@ -17,11 +19,16 @@
   margin-right: 1.5rem;
 };
 
-.container > form > div > input{
-  width: 92.8%;
+.formSmall {
+  @extend .title;
+  @extend .Headline;
+  margin-left: 0.7rem;
 };
-
-.container > form > input{
+.btnForm {
+  @extend .button;
+  font-size: 1.2rem;
+};
+.input{
   width: 92.8%;
 };
 
@@ -30,15 +37,10 @@
     justify-content: center;
     max-width: 100%;
   }
-
-  .container > form {
+  .formContainer {
     margin-left: 1.5rem;
   }
-  .container > form > div > input{
-    max-width: 85%;
-  }
-  
-  .container > form > input{
+  .input{
     max-width: 85%;
   }
 };

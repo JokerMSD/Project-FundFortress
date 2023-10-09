@@ -1,0 +1,136 @@
+@import "../../styles/index.scss";
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    overflow: hidden;
+    height: 7.4375rem;
+    border-radius: 0.5rem;
+    background: var(--grey-1);
+    margin-bottom: 1.5rem;
+};
+.titleCard {
+    @extend .title;
+    @extend .three;
+    margin-top: 1rem;
+    margin-left: 0.87rem;
+    margin-bottom: 0;
+};
+.pCard {
+    @extend .title;
+    @extend .pline;
+    margin-top: 0.9rem;
+    margin-left: 0.87rem;
+    margin-bottom: 0.5rem;
+};
+.pCardValue {
+    @extend .title;
+    @extend .four;
+    margin-top: 0.9rem;
+    margin-left: 0.87rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.87rem;
+};
+.pCardDate{
+    @extend .title;
+    @extend .Headline;
+    margin-top: 0.9rem;
+    margin-left: 0.87rem;
+    margin-bottom: 0.5rem;
+}
+.btnCard {
+    @extend .button;
+    @extend .delete;
+    margin-top: 0.81rem;
+    margin-left: 2rem;
+    margin-right: 1.3rem;
+    margin-bottom: 1.31rem;
+    border-radius: 18.75rem
+};
+.totalSection {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 10%;
+    max-height: 5rem;
+    border: 0.0625rem solid var(--grey-2);
+    padding: 1rem;
+    margin-top: 1.19rem;
+    border-radius: 0.3125rem;
+    margin-right: 1.5rem;
+};
+.trashIcon{
+    width: 1.5rem;
+    height: 1.5rem;
+};
+.ptext {
+    @extend .title;
+    @extend .Headline;
+    margin: 0;
+};
+.totaltext{
+    @extend .title;
+    @extend .three;
+}
+.totalvalue {
+    color: var(--brand-1);
+    text-align: end;
+    @extend .title;
+    @extend .three;
+};
+
+@media (min-width: 320px) and (max-width: 428px) {
+
+    .card {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 0rem;
+        max-width: 85%;
+        height: 13.95rem;
+        margin-left: 6%;
+        margin-top: 1.06rem;
+    };
+    .titleCard {
+        margin-top: 0.5rem;
+        margin-left: 0.87rem;
+        margin-bottom: 0;
+    };
+    .pCard {
+        margin-top: 0.5rem;
+        margin-left: 0.87rem;
+        margin-bottom: 0;
+    };
+    .btnCard {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-top: 0.81rem;
+        margin-left: 0.87rem;
+        margin-bottom: 1.31rem;
+    };
+    .totalSection {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 10%;
+        border: 0.0625rem solid var(--grey-2);
+        padding: 1rem;
+        margin-top: 1.19rem;
+        margin-left: 6%;
+        border-radius: 0.3125rem;
+        max-width: 100%;
+    };
+    .totaltext{
+        margin: 0;
+    };
+    .ptext{
+        margin: 0rem;
+        margin-left: 0;
+    };
+    .totalvalue {
+        text-align: end;
+    };
+  };
+  
+  
