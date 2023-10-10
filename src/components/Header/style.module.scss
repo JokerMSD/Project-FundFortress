@@ -1,3 +1,5 @@
+@import "../../styles/index.scss";
+
 .Header{
     display: flex;
     align-items: center;
@@ -9,6 +11,15 @@
     box-shadow: 0rem 0.25rem 2rem -0.75rem rgba(0, 0, 0, 0.25);
     margin-bottom: 2.44rem;
 };
+
+.button{
+  @extend .button;
+}
+.button2{
+  @extend .button;
+  background-color: var(--grey-3);
+  border: none;
+}
 
 .HeaderLogo{
     height: 1.7rem;
