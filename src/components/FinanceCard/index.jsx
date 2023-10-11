@@ -15,8 +15,8 @@ export const Total = ({ totalValue, darkMode }) => {
 
   return (
     <>
-      <section className={`${Style.totalSection} ${darkMode ? 'dark-mode' : ''}`}>
-        <h2 className={Style.totaltext}>Valor total:</h2>
+      <section className={`${Style.totalSection} ${darkMode ? Style["dark-mode"] : ''}`}>
+        <h2 className={`${Style.totaltext} ${darkMode ? Style["dark-mode-text"] : ''}`}>Valor total:</h2>
         <p className={Style.ptext}>O valor se refere ao saldo</p>
         <p className={Style.totalvalue}>{formattedTotal}</p>
       </section>
@@ -41,19 +41,28 @@ export const FinanceCard = ({ description, value, type, date, onDelete, darkMode
 
   return (
     <>
-    <section className={`${darkMode ? Style["dark-mode"] : ''}`}>
+    <section className={`${Style.cardMainSection}`}>
 
-      <div className={`${Style.card} ${cardClass}`}>
-        <h2 className={Style.titleCard}>{description}</h2>
-        <p className={`${Style.pCard} ${type}`}>{type}</p>
-        <span className={Style.pCardValue}>{formatCurrency(value)}</span>
-        <p className={Style.pCardDate}>{date}</p>
+      <div className={`${Style.card} ${cardClass} ${darkMode ? Style["dark-mode"] : ''}`}>
+
+        <div className={Style.div1}>
+        <h2 className={`${Style.titleCard} ${darkMode ? Style["dark-mode-text"] : ''}`}>{description}</h2>
+        <p className={`${Style.pCard} ${type} ${darkMode ? Style["dark-mode-text"] : ''}`}>{type}</p>
+        </div>
+
+        <div className={Style.div2}>
+        <span className={`${Style.pCardValue} ${darkMode ? Style["dark-mode-text"] : ''}`}>{formatCurrency(value)}</span>
+        <p className={`${Style.pCardDate} ${darkMode ? Style["dark-mode-date"] : ''}`}>{date}</p>
+        </div>
+
+        <div className={Style.div3}>
         <button 
-           className={Style.btnCard} 
-           onClick={handleDeleteClick}
-           >
+           className={`${Style.btnCard}  ${darkMode ? Style["dark-mode-btn"] : ''}`}
+           onClick={handleDeleteClick}>
            <BsFillTrashFill className={Style.trashIcon}/>
         </button>
+        </div>
+
       </div>
           </section>
     </>
