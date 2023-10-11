@@ -9,21 +9,23 @@
   flex-shrink: 0;
   border-radius: 0.5rem;
   border: 0.125rem solid var(--grey-1);
-  background: var(--grey-1);
   font-size: 1.1rem;
 
   &:focus {
     border: 0.125rem solid var(--grey-4);
-    background: var(--grey-1);
   };
 
   &.select {
     width: 100%;
     border: 0.125rem solid var(--grey-1);
-    background: var(--grey-1);
     justify-content: space-between;
     border-radius: 0.5rem;
     border: 0.125rem solid var(--grey-1);
-    background: var(--grey-1);
-  }
+    color: var(--grey-3);
+  };
+
+  &.dark-mode-input{
+    background-color: #292929;
+    color: var(--grey-1);
+  };
 };
