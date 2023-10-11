@@ -41,19 +41,23 @@ export const FinanceApp = ({data, darkMode}) => {
 
   return (
     <>
-        <section className={`financeFormSection ${darkMode ? Style["dark-mode"] : ''}`}>
+        <section className={Style.financeFormSection}>
           <FinanceForm
             finances={finances}
             setFinances={setFinances}
             total={total}
             setTotal={setTotal}
+            darkMode={darkMode}
           />
 
-          <Total totalValue={total} />
+          <Total 
+          darkMode={darkMode} 
+          totalValue={total} 
+          />
         </section>
 
         <section className={Style.financeSection}>
-          <h2 className={Style.financeListTitle}>Resumo Financeiro</h2>
+          <h2 className={`${Style.financeListTitle} ${darkMode ? Style["dark-mode-text"] : ''}`}>Resumo Financeiro</h2>
           <section className={Style.cardSection}>
             {finances.map((finance, index) => (
               <FinanceCard
@@ -62,6 +66,7 @@ export const FinanceApp = ({data, darkMode}) => {
                 value={finance.value}
                 type={finance.valueType}
                 date={finance.date}
+                darkMode={darkMode}
                 onDelete={() => handleDelete(finance.id)}
               />
             ))}
