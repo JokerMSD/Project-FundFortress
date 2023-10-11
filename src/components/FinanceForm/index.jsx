@@ -45,8 +45,8 @@ export const FinanceForm = ({ finances, setFinances, total, setTotal, darkMode }
 
   return (
     <>
-      <section className={`${Style.container} ${darkMode ? Style["dark-mode"] : ''}`}>
-        <form className={Style.formContainer} onSubmit={handleAddFinance}>
+      <section className={Style.container}>
+        <form className={`${Style.formContainer} ${darkMode ? Style["dark-mode"] : ''}`} onSubmit={handleAddFinance}>
           <div className="formDiv">
             <label className="title three" htmlFor="description">
               Descrição
