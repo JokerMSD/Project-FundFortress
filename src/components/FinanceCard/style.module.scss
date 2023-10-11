@@ -2,18 +2,34 @@
 
 .card {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: space-between;
     overflow: hidden;
     height: 7.4375rem;
     border-radius: 0.5rem;
     background: var(--grey-1);
     margin-bottom: 1.5rem;
+    color: var(--grey-4);
+    width: 100%;
+    
+    &.dark-mode{
+        background-color:  #212529;
+        color: white;
+    }
 };
+.dark-mode-text{
+    color: white;
+}
+.dark-mode-btn{
+    background-color: #16191b;
+    color: white;
+}
+.cardMainSection{
+    display: flex
+}
 .titleCard {
     @extend .title;
     @extend .three;
+    max-width: 12rem;
+    text-align: start;
     margin-top: 1rem;
     margin-left: 0.87rem;
     margin-bottom: 0;
@@ -28,12 +44,9 @@
 .pCardValue {
     @extend .title;
     @extend .four;
-    margin-top: 0.9rem;
-    margin-left: 0.87rem;
-    margin-bottom: 0.5rem;
-    margin-right: 0.87rem;
 };
 .pCardDate{
+    position: relative;
     @extend .title;
     @extend .Headline;
     margin-top: 0.9rem;
@@ -41,6 +54,7 @@
     margin-bottom: 0.5rem;
 }
 .btnCard {
+    position: relative;
     @extend .button;
     @extend .delete;
     margin-top: 0.81rem;
@@ -63,7 +77,33 @@
     margin-top: 1.19rem;
     border-radius: 0.3125rem;
     margin-right: 1.5rem;
+
+    &.dark-mode{
+        background: #212529;
+    }
 };
+.div1{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100%;
+}
+.div2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    width: 200px;
+    height: 100%;
+}
+.div3{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 200px;
+    height: 100%;
+}
 .trashIcon{
     width: 1.5rem;
     height: 1.5rem;
@@ -78,6 +118,8 @@
     @extend .three;
 }
 .totalvalue {
+    position: relative;
+    right: 0;
     color: var(--brand-1);
     text-align: end;
     @extend .title;
