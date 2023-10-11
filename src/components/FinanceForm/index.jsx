@@ -48,11 +48,11 @@ export const FinanceForm = ({ finances, setFinances, total, setTotal, darkMode }
       <section className={Style.container}>
         <form className={`${Style.formContainer} ${darkMode ? Style["dark-mode"] : ''}`} onSubmit={handleAddFinance}>
           <div className="formDiv">
-            <label className="title three" htmlFor="description">
+            <label className={`title three ${darkMode ? Style["dark-mode-text"] : ''}`} htmlFor="description">
               Descrição
             </label>
             <input
-              className={Style.input}
+              className={`${Style.input} ${darkMode ? Style["dark-mode-input"] : ''}`}
               onChange={(e) => setDescription(e.target.value)}
               type="text"
               name="description"
@@ -65,11 +65,11 @@ export const FinanceForm = ({ finances, setFinances, total, setTotal, darkMode }
               Ex: Compra de roupas
             </small>
           </div>
-          <label className="title three" htmlFor="value">
+          <label className={`title three ${darkMode ? Style["dark-mode-text"] : ''}`} htmlFor="value">
             Valor(R$)
           </label>
           <input
-            className={Style.input}
+            className={`${Style.input} ${darkMode ? Style["dark-mode-input"] : ''}`}
             onChange={(e) => setValue(e.target.value)}
             type="text"
             name="value"
@@ -79,11 +79,11 @@ export const FinanceForm = ({ finances, setFinances, total, setTotal, darkMode }
             required
           />
 
-          <label className="title three" htmlFor="valueType">
+          <label className={`title three ${darkMode ? Style["dark-mode-text"] : ''}`} htmlFor="valueType">
             Tipo de Valor
           </label>
           <select
-            className="input select"
+            className={`input select ${darkMode ? Style["dark-mode-input"] : ''}`}
             onChange={(e) => setValueType(e.target.value)}
             name="valueType"
             id="valueType"
