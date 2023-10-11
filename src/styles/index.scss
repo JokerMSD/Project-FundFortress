@@ -3,11 +3,15 @@
 @import "./Typography.scss";
 @import "./button.scss";
 @import "./input.scss";
+@import "./toggle.scss";
 
 body {
   font-family: "Nunito", "sans-serif";
   
 };
+.dark-mode{
+  background-color: rgb(57, 56, 56);
+}
 main {
   display: flex;
   flex-wrap: wrap;

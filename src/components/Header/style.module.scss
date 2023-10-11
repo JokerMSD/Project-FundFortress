@@ -12,6 +12,18 @@
     margin-bottom: 2.44rem;
 };
 
+.dark-mode{
+  background-color: rgb(57, 56, 56);
+}
+
+.nightMode{
+  color: white;
+}
+
+.dayMode{
+  color: gold;
+}
+
 .button{
   @extend .button;
 }
