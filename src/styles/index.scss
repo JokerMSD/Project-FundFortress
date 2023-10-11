@@ -8,30 +8,56 @@
 body {
   font-family: "Nunito", "sans-serif";
   
+  &.dark-mode{
+    background-color: #161719;
+  };
 };
-.dark-mode{
-  background-color: #15171A;
-};
+
 main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
 };
+
 .positive {
   border-left: 0.3125rem solid var(--brand-3);
 };
+
 .Entrada{
   color: var(--brand-3);
-}
+};
+
 .negative {
   border-left: 0.3125rem solid var(--brand-red);
 };
+
 .Saída{
   color: var(--brand-red);
 };
+
 .footer {
   margin-top: 10rem;
+};
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #828282;
+};
+
+*::-webkit-scrollbar {
+  width: 0.35rem;
+};
+
+*::-webkit-scrollbar-track {
+  background: none;
+};
+
+*::-webkit-scrollbar-thumb {
+  background-color: #454545;
+  border-radius: 1.25rem;
+  border: 0.015rem solid #828282;
+  border-radius: 1rem
 };
 
 @media (min-width: 320px) and (max-width: 428px) {
