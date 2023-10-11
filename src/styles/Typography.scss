@@ -1,14 +1,13 @@
 @import url("/src/styles/GlobalStyles.scss");
 
 .title {
-  color: var(--grey-4);
   font-size: 2.375rem;
   font-style: normal;
   font-weight: 800;
   line-height: 3rem;
 
   &.two {
-    color: var(--grey-4);
+
     font-size: 1.375rem;
     font-style: normal;
     font-weight: 700;
@@ -23,7 +22,7 @@
   };
 
   &.four {
-    color: var(--grey-4);
+
     font-size: 0.95rem;
     font-style: normal;
     font-weight: 600;
