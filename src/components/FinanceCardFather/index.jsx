@@ -2,18 +2,17 @@ import React, { useState, useEffect } from "react";
 import { Total } from "../FinanceCard";
 import { FinanceCard } from "../FinanceCard";
 import { FinanceForm } from "../FinanceForm";
-import Style from "./style.module.scss"
+import Style from "./style.module.scss";
 
-export const FinanceApp = () => {
+export const FinanceApp = ({data, darkMode}) => {
   const [finances, setFinances] = useState(() => {
     const storedFinances = JSON.parse(localStorage.getItem("finances"));
     return storedFinances || [];
-    
   });
 
   const [total, setTotal] = useState(() => {
     const storedTotal = localStorage.getItem("financesTotal");
-    return storedTotal || []
+    return storedTotal || [];
   });
 
   useEffect(() => {
@@ -30,50 +29,44 @@ export const FinanceApp = () => {
       localStorage.setItem("finances", JSON.stringify(finances));
       localStorage.setItem("financesTotal", JSON.stringify(total));
     };
-    
+
     calculateTotal();
   }, [finances]);
-  
-  
+
   const handleDelete = (id) => {
-    const updatedFinances = finances.filter(
-      (finance) => finance.id !== id
-      );
-      
-      setFinances(updatedFinances);
-    };
-    
-    
+    const updatedFinances = finances.filter((finance) => finance.id !== id);
+
+    setFinances(updatedFinances);
+  };
 
   return (
     <>
-      <section className="financeFormSection">
-        <FinanceForm
-          finances={finances}
-          setFinances={setFinances}
-          total={total}
-          setTotal={setTotal}
-        />
+        <section className={`financeFormSection ${darkMode ? Style["dark-mode"] : ''}`}>
+          <FinanceForm
+            finances={finances}
+            setFinances={setFinances}
+            total={total}
+            setTotal={setTotal}
+          />
 
-        <Total totalValue={total} />
-      </section>
-
-      <section className={Style.financeSection}>
-        <h2 className={Style.financeListTitle}>Resumo Financeiro</h2>
-        <section className={Style.cardSection}>
-          {(finances.map((finance, index) => (
-            <FinanceCard
-              key={index}
-              description={finance.description}
-              value={finance.value}
-              type={finance.valueType}
-              date={finance.date}
-              onDelete={() => handleDelete(finance.id)}
-            />
-          ))
-        )}
+          <Total totalValue={total} />
         </section>
-      </section>
+
+        <section className={Style.financeSection}>
+          <h2 className={Style.financeListTitle}>Resumo Financeiro</h2>
+          <section className={Style.cardSection}>
+            {finances.map((finance, index) => (
+              <FinanceCard
+                key={index}
+                description={finance.description}
+                value={finance.value}
+                type={finance.valueType}
+                date={finance.date}
+                onDelete={() => handleDelete(finance.id)}
+              />
+            ))}
+          </section>
+        </section>
     </>
   );
 };

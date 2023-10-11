@@ -1,7 +1,7 @@
 import Style from "./style.module.scss"
 import { useState } from "react"
 
-export const FinanceForm = ({ finances, setFinances, total, setTotal }) => {
+export const FinanceForm = ({ finances, setFinances, total, setTotal, darkMode }) => {
   const [description, setDescription] = useState("");
   const [value, setValue] = useState("");
   const [valueType, setValueType] = useState("");
@@ -45,7 +45,7 @@ export const FinanceForm = ({ finances, setFinances, total, setTotal }) => {
 
   return (
     <>
-      <section className={Style.container}>
+      <section className={`${Style.container} ${darkMode ? Style["dark-mode"] : ''}`}>
         <form className={Style.formContainer} onSubmit={handleAddFinance}>
           <div className="formDiv">
             <label className="title three" htmlFor="description">
