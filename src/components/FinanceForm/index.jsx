@@ -87,6 +87,7 @@ export const FinanceForm = ({
           >
             Valor(R$)
           </label>
+          <div>
           <input
             className={`${Style.input} ${Style.inputValueNumber} ${
               darkMode ? Style["dark-mode-input"] : ""
@@ -100,6 +101,7 @@ export const FinanceForm = ({
             required
           />
           <small className={Style.formSmall}>Use pontos somente para adicionar centavos</small>
+          </div>
 
           <label
             className={`title three ${darkMode ? Style["dark-mode-text"] : ""}`}
