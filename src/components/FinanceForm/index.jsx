@@ -69,9 +69,9 @@ export const FinanceForm = ({ finances, setFinances, total, setTotal, darkMode }
             Valor(R$)
           </label>
           <input
-            className={`${Style.input} ${darkMode ? Style["dark-mode-input"] : ''}`}
+            className={`${Style.input} ${Style.inputValueNumber} ${darkMode ? Style["dark-mode-input"] : ''}`}
             onChange={(e) => setValue(e.target.value)}
-            type="text"
+            type="number"
             name="value"
             id="value"
             value={value}

@@ -25,6 +25,15 @@ input{
   background-color: #292929
 };
 
+.inputValueNumber{
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.inputValueNumber::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+  
+}
+
 .formContainer {
   display: flex;
   flex-direction: column;
