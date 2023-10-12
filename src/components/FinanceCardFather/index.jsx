@@ -12,7 +12,7 @@ export const FinanceApp = ({data, darkMode}) => {
 
   const [total, setTotal] = useState(() => {
     const storedTotal = localStorage.getItem("financesTotal");
-    return storedTotal || [];
+    return storedTotal || 0;
   });
 
   useEffect(() => {
@@ -25,6 +25,7 @@ export const FinanceApp = ({data, darkMode}) => {
           newTotal -= finance.value;
         }
       });
+
       setTotal(newTotal);
       localStorage.setItem("finances", JSON.stringify(finances));
       localStorage.setItem("financesTotal", JSON.stringify(total));
@@ -38,6 +39,8 @@ export const FinanceApp = ({data, darkMode}) => {
 
     setFinances(updatedFinances);
   };
+
+  const totalClass = total <= 0 ? Style.negative : Style.positive; 
 
   return (
     <>
@@ -53,6 +56,7 @@ export const FinanceApp = ({data, darkMode}) => {
           <Total 
           darkMode={darkMode} 
           totalValue={total} 
+          className={totalClass}
           />
         </section>
 
