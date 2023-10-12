@@ -13,12 +13,24 @@ export const Total = ({ totalValue, darkMode }) => {
   
   const formattedTotal = typeof totalValue === 'number' ? formatCurrency(totalValue) : '0.00';
 
+  let totalValueClass = '';
+
+  if (typeof totalValue === 'number') {
+    if (totalValue < 0) {
+      totalValueClass = darkMode ? Style['negativeValue-Dark'] : Style['negativeValue'];
+    } else if (totalValue === 0) {
+      totalValueClass = darkMode ? Style['neutralValue-Dark'] : Style['neutralValue'];
+    } else {
+      totalValueClass = darkMode ? Style['positiveValue-Dark'] : Style['positiveValue'];
+    }
+  }
+
   return (
     <>
       <section className={`${Style.totalSection} ${darkMode ? Style["dark-mode"] : ''}`}>
         <h2 className={`${Style.totaltext} ${darkMode ? Style["dark-mode-text"] : ''}`}>Valor total:</h2>
         <p className={Style.ptext}>O valor se refere ao saldo</p>
-        <p className={Style.totalvalue}>{formattedTotal}</p>
+        <p className={`${Style.totalvalue} ${totalValueClass}`}>{formattedTotal}</p>
       </section>
     </>
   );
