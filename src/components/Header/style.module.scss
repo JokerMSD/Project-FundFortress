@@ -10,7 +10,7 @@
     background: rgba(201, 201, 201, 0.284);
     box-shadow: 0rem 0.25rem 2rem -0.75rem rgb(135, 135, 135);
     margin-bottom: 2.44rem;
-    border-bottom: 4px rgba(144, 131, 136, 0.138);
+    border-bottom: 4px var(--brand-1);
     border-style: ridge;
 };
 
@@ -39,13 +39,20 @@
 }
 
 .HeaderLogo{
-    height: 1.7rem;
+    height: 11.7rem;
     flex-shrink: 0;
 };
 @media (min-width: 320px) and (max-width: 428px) {
     .Header{
+      justify-content: end;
       margin:0;
       margin-bottom: -9rem;
+    };
+    .HeaderLogo{
+      position: absolute;
+      left: -8%;
+      top: -3.3%;
+      height: 10rem;
     };
   };
   
