@@ -17,14 +17,14 @@
 };
 .dark-mode-text{
     color: white;
-}
+};
 .dark-mode-btn{
     background-color: #16191b;
     color: white;
-}
+};
 .cardMainSection{
     display: flex
-}
+};
 .titleCard {
     @extend .title;
     @extend .three;
@@ -52,7 +52,7 @@
     margin-top: 0.9rem;
     margin-left: 0.87rem;
     margin-bottom: 0.5rem;
-}
+};
 .btnCard {
     position: relative;
     @extend .button;
@@ -87,7 +87,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-}
+};
 .div2{
     width: 200px;
     display: flex;
@@ -96,7 +96,7 @@
     align-items: center;
     max-width: 100%;
     height: 100%;
-}
+};
 .div3{
     width: 200px;
     display: flex;
@@ -104,7 +104,7 @@
     align-items: center;
     max-width: 100%;
     height: 100%;
-}
+};
 .trashIcon{
     width: 1.5rem;
     height: 1.5rem;
@@ -117,7 +117,7 @@
 .totaltext{
     @extend .title;
     @extend .three;
-}
+};
 .totalvalue {
     position: relative;
     right: 0;
@@ -126,6 +126,24 @@
     @extend .title;
     @extend .three;
 };
+.positiveValue {
+    color: #00b700;
+ };
+ .neutralValue{
+    color: var(--brand-1);
+ };
+ .negativeValue {
+     color: #ff0000 
+ }
+ .positiveValue-Dark {
+     color: #6ec06e;
+ };
+ .neutralValue-Dark{
+    color: var(--brand-1);
+ }
+ .negativeValue-Dark {
+     color: #ff6868;
+ };
 
 @media (min-width: 320px) and (max-width: 428px) {
 
