@@ -30,6 +30,7 @@ export const Footer = ({darkMode}) => {
                       <BsLinkedin className={Style.linkedin}/>
                     </button> 
                     <button 
+                       onClick={() => window.open("https://github.com/JokerMSD/Project-FundFortress", "_blank")}
                        className={`${Style.buttonGit} ${darkMode ? Style["dark-mode-button"] : ''}`}
                     >
                       <BsGithub className={Style.git}/>
