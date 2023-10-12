@@ -1,7 +1,13 @@
-import Style from "./style.module.scss"
-import { useState } from "react"
+import Style from "./style.module.scss";
+import { useState } from "react";
 
-export const FinanceForm = ({ finances, setFinances, total, setTotal, darkMode }) => {
+export const FinanceForm = ({
+  finances,
+  setFinances,
+  total,
+  setTotal,
+  darkMode,
+}) => {
   const [description, setDescription] = useState("");
   const [value, setValue] = useState("");
   const [valueType, setValueType] = useState("");
@@ -46,13 +52,25 @@ export const FinanceForm = ({ finances, setFinances, total, setTotal, darkMode }
   return (
     <>
       <section className={Style.container}>
-        <form className={`${Style.formContainer} ${darkMode ? Style["dark-mode"] : ''}`} onSubmit={handleAddFinance}>
+        <form
+          className={`${Style.formContainer} ${
+            darkMode ? Style["dark-mode"] : ""
+          }`}
+          onSubmit={handleAddFinance}
+        >
           <div className="formDiv">
-            <label className={`title three ${darkMode ? Style["dark-mode-text"] : ''}`} htmlFor="description">
+            <label
+              className={`title three ${
+                darkMode ? Style["dark-mode-text"] : ""
+              }`}
+              htmlFor="description"
+            >
               Descrição
             </label>
             <input
-              className={`${Style.input} ${darkMode ? Style["dark-mode-input"] : ''}`}
+              className={`${Style.input} ${
+                darkMode ? Style["dark-mode-input"] : ""
+              }`}
               onChange={(e) => setDescription(e.target.value)}
               type="text"
               name="description"
@@ -61,15 +79,18 @@ export const FinanceForm = ({ finances, setFinances, total, setTotal, darkMode }
               placeholder="Digite aqui sua descrição"
               required
             />
-            <small className={Style.formSmall}>
-              Ex: Compra de roupas
-            </small>
+            <small className={Style.formSmall}>Ex: Compra de roupas</small>
           </div>
-          <label className={`title three ${darkMode ? Style["dark-mode-text"] : ''}`} htmlFor="value">
+          <label
+            className={`title three ${darkMode ? Style["dark-mode-text"] : ""}`}
+            htmlFor="value"
+          >
             Valor(R$)
           </label>
           <input
-            className={`${Style.input} ${Style.inputValueNumber} ${darkMode ? Style["dark-mode-input"] : ''}`}
+            className={`${Style.input} ${Style.inputValueNumber} ${
+              darkMode ? Style["dark-mode-input"] : ""
+            }`}
             onChange={(e) => setValue(e.target.value)}
             type="number"
             name="value"
@@ -78,12 +99,18 @@ export const FinanceForm = ({ finances, setFinances, total, setTotal, darkMode }
             placeholder="R$: 0,00"
             required
           />
+          <small className={Style.formSmall}>Use pontos somente para adicionar centavos</small>
 
-          <label className={`title three ${darkMode ? Style["dark-mode-text"] : ''}`} htmlFor="valueType">
+          <label
+            className={`title three ${darkMode ? Style["dark-mode-text"] : ""}`}
+            htmlFor="valueType"
+          >
             Tipo de Valor
           </label>
           <select
-            className={`input select ${darkMode ? Style["dark-mode-input"] : ''}`}
+            className={`input select ${
+              darkMode ? Style["dark-mode-input"] : ""
+            }`}
             onChange={(e) => setValueType(e.target.value)}
             name="valueType"
             id="valueType"
