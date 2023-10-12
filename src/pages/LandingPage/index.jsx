@@ -1,6 +1,7 @@
 import { Header } from '../../components/Header'
 import { useState, useEffect } from 'react'
 import { FinanceApp } from '../../components/FinanceCardFather'
+import { Footer } from '../../components/Footer';
 
 
 export const LandingPage = () => {
@@ -32,7 +33,7 @@ export const LandingPage = () => {
      <main>
         <FinanceApp darkMode={darkMode} handleDarkMode={handleDarkMode}  />
      </main>
-     <footer/>
+     <Footer darkMode={darkMode} handleDarkMode={handleDarkMode}/>
     </>
   );
 };
