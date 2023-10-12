@@ -7,18 +7,29 @@
 
 body {
   font-family: "Nunito", "sans-serif";
-  
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+
   &.dark-mode{
     background-color: #161719;
   };
 };
 
+#root{
+  min-height: 100vh;
+}
+
 main {
+  overflow-y: auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  height: 88.5vh;
+  min-height: 81.8vh
 };
 
 .positive {
@@ -35,10 +46,6 @@ main {
 
 .Saída{
   color: var(--brand-red);
-};
-
-.footer {
-  margin-top: 10rem;
 };
 
 * {
